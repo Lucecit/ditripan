@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1-0">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Distripan de la Sabana</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="imagen/distripan de la sabana.png" alt="logo de la compañia">
+    </div>
+    <h1>DISTRI PAN DE LA SABANA</h1>
+    <h2>Alimentos a tu alcance</h2>
+
+    <nav>
+      <ul>
+
+        <li><a href="cliente.html" onclick="showForm('cliente')">cliente</a></li>
+        <li><a href="producto.html" onclick="showForm('producto')">producto</a></li>
+        <li><a href="factura.html" onclick="showForm('factura')">factura</a></li>
+        <li><a href="pago.html" onclick="showForm('pago')">pago</a></li>
+        <li><a href="ventas.html" onclick="showForm('ventas')">ventas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <section>
+    <div class="registro-usuario">
+      <h3>Registro de usuario</h3>
+      <form action="registro.php" method="post">
+        <label for="identificacion">Identificación:</label>
+        <input type="text" id="identificacion" name="identificacion">
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña">
+        <input type="submit" value="Realizar registro">
+      </form>
+    </div>
+    <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+
+    script src="script.js"></script>
+
+    <script type="text/javascript">
+
+      document.forms["registro-usuario"].submit();
+    </script>
+    <script>
+      const form = document.querySelector("#contraseña");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const identificacion = document.querySelector("#identificacion");
+        const contraseña = document.querySelector("#contraseña");
+
+
+        if (identificacion.value === "" || contraseña.value === "") {
+          alert("Todos los campos son requeridos");
+        } else {
+          form.submit();
+        }
+      });
+</scrip >
+  
+</body >
+
+</html >
